@@ -1,0 +1,58 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+.venv/
+
+# Logs
+logs/
+*.log
+
+# Temporary audio/files
+tmp_audio/
+tmp/
+temp/
+
+# AI models / downloaded Hugging Face models
+src/models/whisper/
+src/models/**/.locks/
+src/models/**/*.incomplete
+src/models/**/blobs/
+src/models/**/snapshots/
+src/models/**/trees/
+
+*.onnx
+*.bin
+*.pt
+*.pth
+*.safetensors
+*.gguf
+
+
+
+# Environment / secrets
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing/cache
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Build/package
+build/
+dist/
+*.egg-info/
+
+

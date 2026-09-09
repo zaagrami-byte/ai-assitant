@@ -1,0 +1,25 @@
+# ollama : client Python officiel pour communiquer avec le serveur Ollama local
+# (appels chat/completion, gestion des erreurs HTTP, streaming). Léger, pas de
+# dépendances lourdes, fonctionne aussi bien sur PC que sur Raspberry Pi.
+ollama>=0.3.0
+
+# piper-tts : moteur de synthèse vocale locale (ONNX), voix française
+# naturelle, faible latence CPU, conçu pour tourner sur Raspberry Pi.
+piper-tts>=1.7.0
+
+# faster-whisper : reconnaissance vocale locale (Whisper + CTranslate2,
+# quantification int8), bonne précision en français, léger et rapide en CPU.
+faster-whisper>=1.2.0
+
+# sounddevice : capture audio depuis le microphone (nécessite la lib système
+# 'libportaudio2' — pas installable via pip, voir requirements ci-dessous).
+sounddevice>=0.4.6
+
+# numpy : manipulation des tampons audio (requis par sounddevice/faster-whisper).
+numpy>=1.24
+
+# webrtcvad : detection d'activite vocale (VAD) utilisee par stt.py pour
+# detecter le debut/la fin de la parole. Import requis par stt.py mais
+# absent des dependances declarees jusqu'ici -> installation impossible
+# sans cette ligne.
+webrtcvad>=2.0.10
